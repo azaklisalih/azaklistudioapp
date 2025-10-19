@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Azakli Studio koyu arka plan */
+html, body, #root {
+  height: 100%;
+  background: #0F0C1E;
+}
+
+/* Cursor stilleri */
+* {
+  cursor: default;
+}
+
+/* Sadece tıklanabilir elementlerde pointer cursor */
+a, button, [role="button"], input, textarea, select {
+  cursor: pointer;
+}
+
+/* Input alanlarında text cursor */
+input[type="text"], 
+input[type="email"], 
+input[type="password"], 
+input[type="search"], 
+input[type="url"], 
+input[type="tel"], 
+input[type="number"], 
+textarea {
+  cursor: text;
+}
+
+/* Linklerde pointer cursor */
+a {
+  cursor: pointer;
+}
+
+/* Butonlarda pointer cursor */
+button {
+  cursor: pointer;
+}
+
+/* Disabled elementlerde not-allowed cursor */
+button:disabled, 
+input:disabled, 
+textarea:disabled, 
+select:disabled {
+  cursor: not-allowed;
+}
+
+/* Scroll bar stilleri */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1B1A2C;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00E676;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00C8FF;
+}
