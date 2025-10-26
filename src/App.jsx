@@ -111,25 +111,25 @@ function HomePage() {
       </header>
 
       {/* Hero */}
-      <section className="mx-auto max-w-7xl px-4 pt-8 md:pt-20 pb-8 md:pb-12">
-        <div className="grid md:grid-cols-2 gap-10 items-center">
-          <div>
-            <motion.h1 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="text-3xl md:text-5xl font-bold leading-tight" style={{ color: colors.text }}>
+      <section className="mx-auto max-w-7xl px-4 pt-6 md:pt-20 pb-6 md:pb-12">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-10 items-center">
+          <div className="order-2 md:order-1">
+            <motion.h1 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="text-2xl md:text-5xl font-bold leading-tight" style={{ color: colors.text }}>
               {t.taglineTop}
-              <span className="block mt-1 text-2xl md:text-4xl font-semibold" style={{ background: `linear-gradient(90deg, ${colors.accent1}, ${colors.accent2})`, WebkitBackgroundClip: "text", color: "transparent" }}>
+              <span className="block mt-1 text-xl md:text-4xl font-semibold" style={{ background: `linear-gradient(90deg, ${colors.accent1}, ${colors.accent2})`, WebkitBackgroundClip: "text", color: "transparent" }}>
                 {t.taglineAccent}
               </span>
             </motion.h1>
 
-            <p className="mt-4 text-base md:text-lg" style={{ color: colors.mute }}>
+            <p className="mt-3 md:mt-4 text-sm md:text-lg leading-relaxed" style={{ color: colors.mute }}>
               {t.heroText}
             </p>
 
-            <div className="mt-6 flex flex-wrap items-center gap-3">
-              <a href="#products" className="px-5 py-3 rounded-xl font-semibold flex items-center gap-2 shadow" style={{ background: colors.accent2, color: "#031319" }}>
+            <div className="mt-4 md:mt-6 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+              <a href="#products" className="px-6 py-4 rounded-xl font-semibold flex items-center justify-center gap-2 shadow min-h-[48px]" style={{ background: colors.accent2, color: "#031319" }}>
                 {t.ctaExplore} <ArrowRight className="w-4 h-4" />
               </a>
-              <a href="#contact" className="px-5 py-3 rounded-xl font-semibold" style={{ background: colors.surface, color: colors.text }}>
+              <a href="#contact" className="px-6 py-4 rounded-xl font-semibold text-center min-h-[48px] flex items-center justify-center" style={{ background: colors.surface, color: colors.text }}>
                 {t.ctaContact}
               </a>
             </div>
@@ -147,50 +147,50 @@ function HomePage() {
             </div>
           </div>
 
-          <motion.div initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.7, delay: 0.1 }} className="relative">
+          <motion.div initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.7, delay: 0.1 }} className="relative order-1 md:order-2">
             <div className="aspect-[16/10] w-full rounded-2xl p-1" style={{ background: `linear-gradient(135deg, ${colors.accent1}55, ${colors.accent2}55)` }}>
-              <div className="w-full h-full rounded-xl p-6 flex items-center justify-center" style={{ background: colors.surface }}>
+              <div className="w-full h-full rounded-xl p-4 md:p-6 flex items-center justify-center" style={{ background: colors.surface }}>
                 {/* Demo ekran: ürün vitrin kartı */}
-                <div className="grid gap-4 w-full max-w-md">
-                  <div className="rounded-xl p-4" style={{ background: "#121124" }}>
-                    <div className="flex items-center gap-3 mb-3">
+                <div className="grid gap-3 md:gap-4 w-full max-w-md">
+                  <div className="rounded-xl p-3 md:p-4" style={{ background: "#121124" }}>
+                    <div className="flex items-center gap-2 md:gap-3 mb-2 md:mb-3">
                       <img 
                         src={potentialsRadarLogo} 
                         alt="Potentials Radar Logo" 
-                        className="w-8 h-8 rounded-lg object-cover"
+                        className="w-6 h-6 md:w-8 md:h-8 rounded-lg object-cover"
                         style={{ boxShadow: `0 2px 10px ${colors.accent2}44` }}
                       />
                       <div>
                         <span className="text-xs uppercase tracking-widest" style={{ color: colors.mute }}>Featured</span>
-                        <h3 className="mt-1 text-xl font-semibold" style={{ color: colors.text }}>{t.featured.title}</h3>
+                        <h3 className="mt-1 text-lg md:text-xl font-semibold" style={{ color: colors.text }}>{t.featured.title}</h3>
                       </div>
                     </div>
-                    <p className="text-sm mt-2" style={{ color: colors.mute }}>{t.featured.desc}</p>
-                    <div className="mt-3 flex gap-2">
-                      <a href={t.featured.appStore} target="_blank" rel="noopener noreferrer" className="text-sm px-3 py-2 rounded-lg" style={{ background: colors.accent1, color: "#06120b" }}>App Store</a>
-                      <a href={t.featured.googlePlay} target="_blank" rel="noopener noreferrer" className="text-sm px-3 py-2 rounded-lg" style={{ background: colors.accent2, color: "#031319" }}>Google Play</a>
+                    <p className="text-xs md:text-sm mt-2" style={{ color: colors.mute }}>{t.featured.desc}</p>
+                    <div className="mt-2 md:mt-3 flex flex-col sm:flex-row gap-2">
+                      <a href={t.featured.appStore} target="_blank" rel="noopener noreferrer" className="text-xs md:text-sm px-3 py-2 rounded-lg text-center min-h-[40px] flex items-center justify-center" style={{ background: colors.accent1, color: "#06120b" }}>App Store</a>
+                      <a href={t.featured.googlePlay} target="_blank" rel="noopener noreferrer" className="text-xs md:text-sm px-3 py-2 rounded-lg text-center min-h-[40px] flex items-center justify-center" style={{ background: colors.accent2, color: "#031319" }}>Google Play</a>
                     </div>
                   </div>
-                  <div className="rounded-xl p-4 border" style={{ borderColor: "#ffffff14", background: "#121124" }}>
-                    <p className="text-sm" style={{ color: colors.mute }}>{lang === "tr" ? "Hızlı performans, güvenilir veri ve kullanıcı dostu deneyim." : "Fast performance, reliable data and user-friendly experience."}</p>
+                  <div className="rounded-xl p-3 md:p-4 border" style={{ borderColor: "#ffffff14", background: "#121124" }}>
+                    <p className="text-xs md:text-sm" style={{ color: colors.mute }}>{lang === "tr" ? "Hızlı performans, güvenilir veri ve kullanıcı dostu deneyim." : "Fast performance, reliable data and user-friendly experience."}</p>
                   </div>
                 </div>
               </div>
             </div>
             {/* Glow */}
-            <div className="absolute -inset-6 -z-10 rounded-[2rem]" style={{ background: `radial-gradient(600px 200px at 70% 20%, ${colors.accent2}22, transparent), radial-gradient(500px 350px at 20% 80%, ${colors.accent1}18, transparent)` }} />
+            <div className="absolute -inset-4 md:-inset-6 -z-10 rounded-[2rem]" style={{ background: `radial-gradient(600px 200px at 70% 20%, ${colors.accent2}22, transparent), radial-gradient(500px 350px at 20% 80%, ${colors.accent1}18, transparent)` }} />
           </motion.div>
         </div>
       </section>
 
       {/* Products */}
-      <section id="products" className="mx-auto max-w-7xl px-4 py-12 md:py-16">
-        <div className="flex items-end justify-between">
-          <h2 className="text-2xl md:text-3xl font-bold" style={{ color: colors.text }}>{t.productsTitle}</h2>
-          <a href="#contact" className="text-sm" style={{ color: colors.accent2 }}>{t.productsCTA}</a>
+      <section id="products" className="mx-auto max-w-7xl px-4 py-8 md:py-16">
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3">
+          <h2 className="text-xl md:text-3xl font-bold" style={{ color: colors.text }}>{t.productsTitle}</h2>
+          <a href="#contact" className="text-sm self-start sm:self-auto" style={{ color: colors.accent2 }}>{t.productsCTA}</a>
         </div>
 
-        <div className="mt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="mt-4 md:mt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {t.products.map((product, index) => {
             const productId = product.name.toLowerCase().replace(/\s+/g, '-');
             return (
@@ -219,10 +219,10 @@ function HomePage() {
                     )}
                     <p className={`${index === 0 ? 'mt-3' : 'mt-2'} text-sm`} style={{ color: colors.mute }}>{product.desc}</p>
                     {index === 0 && product.links && Object.keys(product.links).length > 0 && (
-                      <div className="mt-auto flex gap-2 pt-4">
-                        {product.links.appStore && <a href={product.links.appStore} target="_blank" rel="noopener noreferrer" className="px-3 py-2 rounded-lg text-sm font-medium" style={{ background: colors.accent1, color: "#06120b" }}>App Store</a>}
-                        {product.links.googlePlay && <a href={product.links.googlePlay} target="_blank" rel="noopener noreferrer" className="px-3 py-2 rounded-lg text-sm font-medium" style={{ background: colors.accent2, color: "#031319" }}>Google Play</a>}
-                        {product.links.x && <a href={product.links.x} target="_blank" rel="noopener noreferrer" className="px-3 py-2 rounded-lg text-sm font-medium" style={{ background: "#121124", color: colors.text, border: "1px solid #ffffff14" }}>Twitter/X</a>}
+                      <div className="mt-auto flex flex-col sm:flex-row gap-2 pt-4">
+                        {product.links.appStore && <a href={product.links.appStore} target="_blank" rel="noopener noreferrer" className="px-3 py-3 rounded-lg text-sm font-medium text-center min-h-[44px] flex items-center justify-center" style={{ background: colors.accent1, color: "#06120b" }}>App Store</a>}
+                        {product.links.googlePlay && <a href={product.links.googlePlay} target="_blank" rel="noopener noreferrer" className="px-3 py-3 rounded-lg text-sm font-medium text-center min-h-[44px] flex items-center justify-center" style={{ background: colors.accent2, color: "#031319" }}>Google Play</a>}
+                        {product.links.x && <a href={product.links.x} target="_blank" rel="noopener noreferrer" className="px-3 py-3 rounded-lg text-sm font-medium text-center min-h-[44px] flex items-center justify-center" style={{ background: "#121124", color: colors.text, border: "1px solid #ffffff14" }}>Twitter/X</a>}
                       </div>
                     )}
                     {index !== 0 && (
@@ -278,15 +278,15 @@ function HomePage() {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="mx-auto max-w-7xl px-4 py-12 md:py-16">
-        <div className="rounded-2xl p-6 border" style={{ background: colors.surface, borderColor: "#ffffff14" }}>
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+      <section id="contact" className="mx-auto max-w-7xl px-4 py-8 md:py-16">
+        <div className="rounded-2xl p-4 md:p-6 border" style={{ background: colors.surface, borderColor: "#ffffff14" }}>
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 md:gap-6">
             <div>
-              <h2 className="text-2xl md:text-3xl font-bold" style={{ color: colors.text }}>{t.contactTitle}</h2>
+              <h2 className="text-xl md:text-3xl font-bold" style={{ color: colors.text }}>{t.contactTitle}</h2>
               <p className="mt-2 text-sm" style={{ color: colors.mute }}>{t.contactDesc}</p>
             </div>
-            <div className="grid gap-3 w-full md:w-auto">
-              <a href={`mailto:${t.email}`} className="px-5 py-3 rounded-xl font-semibold flex items-center justify-center gap-2" style={{ background: colors.accent1, color: "#06120b" }}>
+            <div className="w-full md:w-auto">
+              <a href={`mailto:${t.email}`} className="px-6 py-4 rounded-xl font-semibold flex items-center justify-center gap-2 min-h-[48px]" style={{ background: colors.accent1, color: "#06120b" }}>
                 <Mail className="w-4 h-4"/> {t.email}
               </a>
             </div>
@@ -295,13 +295,13 @@ function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="mt-8 border-t" style={{ borderColor: "#ffffff14" }}>
-        <div className="mx-auto max-w-7xl px-4 py-6 flex flex-col md:flex-row items-center justify-between gap-3">
-          <p className="text-xs" style={{ color: colors.mute }}>{t.footerNote}</p>
+      <footer className="mt-6 md:mt-8 border-t" style={{ borderColor: "#ffffff14" }}>
+        <div className="mx-auto max-w-7xl px-4 py-4 md:py-6 flex flex-col md:flex-row items-center justify-between gap-3">
+          <p className="text-xs text-center md:text-left" style={{ color: colors.mute }}>{t.footerNote}</p>
           <div className="flex items-center gap-3 text-xs" style={{ color: colors.mute }}>
-            <Link to={t.footerLinks.privacy} className="hover:opacity-90">{lang === "tr" ? "Gizlilik" : "Privacy"}</Link>
+            <Link to={t.footerLinks.privacy} className="hover:opacity-90 py-2 px-2">{lang === "tr" ? "Gizlilik" : "Privacy"}</Link>
             <span className="opacity-30">•</span>
-            <a href={t.footerLinks.terms} className="hover:opacity-90">{lang === "tr" ? "Kullanım Şartları" : "Terms"}</a>
+            <a href={t.footerLinks.terms} className="hover:opacity-90 py-2 px-2">{lang === "tr" ? "Kullanım Şartları" : "Terms"}</a>
           </div>
         </div>
       </footer>
