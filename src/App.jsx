@@ -199,30 +199,32 @@ function HomePage() {
                 borderColor: index === 0 ? 'transparent' : "#ffffff14" 
               }}>
                 <Link to={`/product/${productId}`}>
-                  <div className={`${index === 0 ? 'h-full rounded-2xl p-3 md:p-4 flex flex-col min-h-0' : ''}`} style={{ background: index === 0 ? colors.surface : 'transparent' }}>
+                  <div className={`${index === 0 ? 'h-full rounded-2xl p-2 md:p-3 flex flex-col min-h-0 overflow-hidden' : ''}`} style={{ background: index === 0 ? colors.surface : 'transparent' }}>
                     {index === 0 && (
-                      <div className="flex items-center gap-2 md:gap-3 mb-2 md:mb-3">
+                      <div className="flex items-center gap-2 mb-2">
                         <img 
                           src={potentialsRadarLogo} 
                           alt="Potentials Radar Logo" 
-                          className="w-10 h-10 md:w-12 md:h-12 rounded-2xl object-cover flex-shrink-0"
+                          className="w-8 h-8 md:w-10 md:h-10 rounded-xl object-cover flex-shrink-0"
                           style={{ boxShadow: `0 4px 20px ${colors.accent2}44` }}
                         />
                         <div className="min-w-0 flex-1">
-                          <h3 className="font-semibold text-base md:text-lg truncate" style={{ color: colors.text }}>{product.name}</h3>
-                          <p className="text-xs truncate" style={{ color: colors.mute }}>{product.subtitle}</p>
+                          <div className="flex items-center gap-1 mb-1">
+                            <span className="text-xs uppercase tracking-widest" style={{ color: colors.mute }}>Featured</span>
+                          </div>
+                          <h3 className="font-semibold text-sm md:text-base truncate" style={{ color: colors.text }}>{product.name}</h3>
                         </div>
                       </div>
                     )}
                     {index !== 0 && (
                       <h3 className="font-semibold text-lg" style={{ color: colors.text }}>{product.name}</h3>
                     )}
-                    <p className={`${index === 0 ? 'mt-2 md:mt-3' : 'mt-2'} text-xs md:text-sm line-clamp-3`} style={{ color: colors.mute }}>{product.desc}</p>
+                    <p className={`${index === 0 ? 'mt-1 md:mt-2' : 'mt-2'} text-xs md:text-sm line-clamp-2`} style={{ color: colors.mute }}>{product.desc}</p>
                     {index === 0 && product.links && Object.keys(product.links).length > 0 && (
-                      <div className="mt-auto flex flex-col gap-2 pt-3 md:pt-4">
-                        {product.links.appStore && <a href={product.links.appStore} target="_blank" rel="noopener noreferrer" className="px-2 py-2 rounded-lg text-xs font-medium text-center min-h-[36px] flex items-center justify-center" style={{ background: colors.accent1, color: "#06120b" }}>App Store</a>}
-                        {product.links.googlePlay && <a href={product.links.googlePlay} target="_blank" rel="noopener noreferrer" className="px-2 py-2 rounded-lg text-xs font-medium text-center min-h-[36px] flex items-center justify-center" style={{ background: colors.accent2, color: "#031319" }}>Google Play</a>}
-                        {product.links.x && <a href={product.links.x} target="_blank" rel="noopener noreferrer" className="px-2 py-2 rounded-lg text-xs font-medium text-center min-h-[36px] flex items-center justify-center" style={{ background: "#121124", color: colors.text, border: "1px solid #ffffff14" }}>Twitter/X</a>}
+                      <div className="mt-auto flex flex-col gap-1 pt-2">
+                        {product.links.appStore && <a href={product.links.appStore} target="_blank" rel="noopener noreferrer" className="px-2 py-1.5 rounded-lg text-xs font-medium text-center min-h-[32px] flex items-center justify-center" style={{ background: colors.accent1, color: "#06120b" }}>App Store</a>}
+                        {product.links.googlePlay && <a href={product.links.googlePlay} target="_blank" rel="noopener noreferrer" className="px-2 py-1.5 rounded-lg text-xs font-medium text-center min-h-[32px] flex items-center justify-center" style={{ background: colors.accent2, color: "#031319" }}>Google Play</a>}
+                        {product.links.x && <a href={product.links.x} target="_blank" rel="noopener noreferrer" className="px-2 py-1.5 rounded-lg text-xs font-medium text-center min-h-[32px] flex items-center justify-center" style={{ background: "#121124", color: colors.text, border: "1px solid #ffffff14" }}>Twitter/X</a>}
                       </div>
                     )}
                     {index !== 0 && (
