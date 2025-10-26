@@ -92,13 +92,26 @@ function HomePage() {
                   </a>
                 );
               })}
+              <div className="pt-2 border-t" style={{ borderColor: "#ffffff14" }}>
+                <button onClick={() => {
+                  handleLangChange(lang === "tr" ? "en" : "tr");
+                  setOpen(false);
+                }}
+                  className="w-full py-2 rounded-lg px-2 text-left flex items-center justify-between"
+                  style={{ color: colors.text }}>
+                  <span>{lang === "tr" ? "English" : "Türkçe"}</span>
+                  <span className="text-xs px-2 py-1 rounded border" style={{ borderColor: "#ffffff22" }}>
+                    {lang.toUpperCase()}
+                  </span>
+                </button>
+              </div>
             </div>
           </div>
         )}
       </header>
 
       {/* Hero */}
-      <section className="mx-auto max-w-7xl px-4 pt-12 md:pt-20 pb-12">
+      <section className="mx-auto max-w-7xl px-4 pt-8 md:pt-20 pb-8 md:pb-12">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div>
             <motion.h1 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="text-3xl md:text-5xl font-bold leading-tight" style={{ color: colors.text }}>
@@ -181,7 +194,7 @@ function HomePage() {
           {t.products.map((product, index) => {
             const productId = product.name.toLowerCase().replace(/\s+/g, '-');
             return (
-              <div key={index} className={`rounded-2xl p-${index === 0 ? '1' : '5'} ${index === 0 ? '' : 'border'} cursor-pointer hover:scale-105 transition-transform`} style={{ 
+              <div key={index} className={`rounded-2xl ${index === 0 ? 'p-1' : 'p-4 md:p-5'} ${index === 0 ? '' : 'border'} cursor-pointer hover:scale-105 transition-transform`} style={{ 
                 background: index === 0 ? `linear-gradient(135deg, ${colors.accent1}55, ${colors.accent2}55)` : colors.surface, 
                 borderColor: index === 0 ? 'transparent' : "#ffffff14" 
               }}>
