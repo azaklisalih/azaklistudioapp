@@ -27,6 +27,11 @@ export default function ProductDetail() {
     localStorage.setItem('privacy-lang', newLang);
   };
 
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [productId]);
+
   // Find the product by ID
   const product = t.products.find(p => 
     p.name.toLowerCase().replace(/\s+/g, '-') === productId

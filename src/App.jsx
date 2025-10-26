@@ -194,12 +194,12 @@ function HomePage() {
           {t.products.map((product, index) => {
             const productId = product.name.toLowerCase().replace(/\s+/g, '-');
             return (
-              <div key={index} className={`rounded-2xl ${index === 0 ? 'p-1' : 'p-4 md:p-5'} ${index === 0 ? '' : 'border'} cursor-pointer hover:scale-105 transition-transform`} style={{ 
+              <div key={index} className={`rounded-2xl ${index === 0 ? 'p-1' : 'p-4 md:p-5'} ${index === 0 ? '' : 'border'} cursor-pointer hover:scale-105 transition-transform overflow-hidden`} style={{ 
                 background: index === 0 ? `linear-gradient(135deg, ${colors.accent1}55, ${colors.accent2}55)` : colors.surface, 
                 borderColor: index === 0 ? 'transparent' : "#ffffff14" 
               }}>
                 <Link to={`/product/${productId}`}>
-                  <div className={`${index === 0 ? 'h-full rounded-2xl p-5 flex flex-col' : ''}`} style={{ background: index === 0 ? colors.surface : 'transparent' }}>
+                  <div className={`${index === 0 ? 'h-full rounded-2xl p-4 md:p-5 flex flex-col' : ''}`} style={{ background: index === 0 ? colors.surface : 'transparent' }}>
                     {index === 0 && (
                       <div className="flex items-center gap-3">
                         <img 
