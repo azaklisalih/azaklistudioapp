@@ -199,34 +199,34 @@ function HomePage() {
                 borderColor: index === 0 ? 'transparent' : "#ffffff14" 
               }}>
                 <Link to={`/product/${productId}`}>
-                  <div className={`${index === 0 ? 'h-full rounded-2xl p-4 md:p-5 flex flex-col' : ''}`} style={{ background: index === 0 ? colors.surface : 'transparent' }}>
+                  <div className={`${index === 0 ? 'h-full rounded-2xl p-3 md:p-4 flex flex-col min-h-0' : ''}`} style={{ background: index === 0 ? colors.surface : 'transparent' }}>
                     {index === 0 && (
-                      <div className="flex items-center gap-3">
+                      <div className="flex items-center gap-2 md:gap-3 mb-2 md:mb-3">
                         <img 
                           src={potentialsRadarLogo} 
                           alt="Potentials Radar Logo" 
-                          className="w-12 h-12 rounded-2xl object-cover"
+                          className="w-10 h-10 md:w-12 md:h-12 rounded-2xl object-cover flex-shrink-0"
                           style={{ boxShadow: `0 4px 20px ${colors.accent2}44` }}
                         />
-                        <div>
-                          <h3 className="font-semibold text-lg" style={{ color: colors.text }}>{product.name}</h3>
-                          <p className="text-xs" style={{ color: colors.mute }}>{product.subtitle}</p>
+                        <div className="min-w-0 flex-1">
+                          <h3 className="font-semibold text-base md:text-lg truncate" style={{ color: colors.text }}>{product.name}</h3>
+                          <p className="text-xs truncate" style={{ color: colors.mute }}>{product.subtitle}</p>
                         </div>
                       </div>
                     )}
                     {index !== 0 && (
                       <h3 className="font-semibold text-lg" style={{ color: colors.text }}>{product.name}</h3>
                     )}
-                    <p className={`${index === 0 ? 'mt-3' : 'mt-2'} text-sm`} style={{ color: colors.mute }}>{product.desc}</p>
+                    <p className={`${index === 0 ? 'mt-2 md:mt-3' : 'mt-2'} text-xs md:text-sm line-clamp-3`} style={{ color: colors.mute }}>{product.desc}</p>
                     {index === 0 && product.links && Object.keys(product.links).length > 0 && (
-                      <div className="mt-auto flex flex-col sm:flex-row gap-2 pt-4">
-                        {product.links.appStore && <a href={product.links.appStore} target="_blank" rel="noopener noreferrer" className="px-3 py-3 rounded-lg text-sm font-medium text-center min-h-[44px] flex items-center justify-center" style={{ background: colors.accent1, color: "#06120b" }}>App Store</a>}
-                        {product.links.googlePlay && <a href={product.links.googlePlay} target="_blank" rel="noopener noreferrer" className="px-3 py-3 rounded-lg text-sm font-medium text-center min-h-[44px] flex items-center justify-center" style={{ background: colors.accent2, color: "#031319" }}>Google Play</a>}
-                        {product.links.x && <a href={product.links.x} target="_blank" rel="noopener noreferrer" className="px-3 py-3 rounded-lg text-sm font-medium text-center min-h-[44px] flex items-center justify-center" style={{ background: "#121124", color: colors.text, border: "1px solid #ffffff14" }}>Twitter/X</a>}
+                      <div className="mt-auto flex flex-col gap-2 pt-3 md:pt-4">
+                        {product.links.appStore && <a href={product.links.appStore} target="_blank" rel="noopener noreferrer" className="px-2 py-2 rounded-lg text-xs font-medium text-center min-h-[36px] flex items-center justify-center" style={{ background: colors.accent1, color: "#06120b" }}>App Store</a>}
+                        {product.links.googlePlay && <a href={product.links.googlePlay} target="_blank" rel="noopener noreferrer" className="px-2 py-2 rounded-lg text-xs font-medium text-center min-h-[36px] flex items-center justify-center" style={{ background: colors.accent2, color: "#031319" }}>Google Play</a>}
+                        {product.links.x && <a href={product.links.x} target="_blank" rel="noopener noreferrer" className="px-2 py-2 rounded-lg text-xs font-medium text-center min-h-[36px] flex items-center justify-center" style={{ background: "#121124", color: colors.text, border: "1px solid #ffffff14" }}>Twitter/X</a>}
                       </div>
                     )}
                     {index !== 0 && (
-                      <div className="mt-4 flex gap-2">
+                      <div className="mt-4 flex flex-wrap gap-1 md:gap-2">
                         {product.tags.map((tag, tagIndex) => (
                           <span key={tagIndex} className="text-xs px-2 py-1 rounded-lg" style={{ background: "#121124", color: colors.mute, border: "1px solid #ffffff14" }}>{tag}</span>
                         ))}
