@@ -1,9 +1,7 @@
 # app-ads.txt for Azakli Studio
 # This file is used for app advertising verification
 
-# Add your app advertising network entries here
-# Example format:
-# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+google.com, pub-4351659447987856, DIRECT, f08c47fec0942fa0
 
 # For more information about app-ads.txt, visit:
 # https://iabtechlab.com/ads-txt/
